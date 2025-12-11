@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { DragDropContext, Droppable, DropResult } from '@hello-pangea/dnd';
 import { initialData } from '../data';
 import { TaskCard } from './TaskCard';
-import { MoreHorizontal, Plus, X } from 'lucide-react';
+import { MoreHorizontal, Plus } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function KanbanBoard() {
@@ -10,7 +10,7 @@ export function KanbanBoard() {
 
   // This function is called automatically when a user stops dragging
   const onDragEnd = (result: DropResult) => {
-    const { destination, source, draggableId } = result;
+    const { destination, source } = result;
 
     // 1. If dropped outside a valid droppable area, do nothing
     if (!destination) return;

@@ -5,8 +5,7 @@ import {
   PieChart, 
   Users, 
   Folder,
-  Search,
-  MoreHorizontal
+  Search
 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
