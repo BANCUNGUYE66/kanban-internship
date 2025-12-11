@@ -1,5 +1,6 @@
 import { Sidebar } from "./components/Sidebar";
 import { Header } from "./components/Header";
+import { KanbanBoard } from "./components/KanbanBoard"; 
 
 function App() {
   return (
@@ -9,14 +10,12 @@ function App() {
         <Sidebar />
       </aside>
 
-      <main className="flex-1 flex flex-col">
-        {/* The new Header goes here */}
+      <main className="flex-1 flex flex-col overflow-hidden"> {/* Added overflow-hidden to fix scrolling */}
         <Header /> 
         
         {/* Kanban Board Area */}
-        <div className="flex-1 p-8 overflow-auto bg-gray-50/50">
-          {/* We will build the board next */}
-          <h2 className="text-lg font-semibold mb-4">Kanban Board Area</h2>
+        <div className="flex-1 overflow-x-auto overflow-y-hidden bg-gray-50/50 p-6">
+            <KanbanBoard />
         </div>
       </main>
     </div>
